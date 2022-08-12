@@ -19,9 +19,8 @@ async function bootstrap() {
   });
 
   app.enableCors({
-    preflightContinue: true,
     credentials: true,
-    origin: '*',
+    origin: true,
   });
 
   await app.listen(3000, '0.0.0.0');

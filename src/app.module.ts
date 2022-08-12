@@ -12,6 +12,7 @@ import { UserModule } from './user/user.module';
       password: 'Pruebas%ALI%2020',
       database: 'testing_ali_fullstack',
       entities: [User],
+      synchronize: true,
     }),
     UserModule,
   ],

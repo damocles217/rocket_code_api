@@ -15,7 +15,7 @@ export class User {
   lastname: string;
 
   @Column({ nullable: true, length: 255 })
-  sencondLastname?: string;
+  secondLastname?: string;
 
   @Column({ type: 'varchar', length: 120 })
   bornDate: string;

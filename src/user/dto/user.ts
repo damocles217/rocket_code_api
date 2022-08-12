@@ -5,7 +5,7 @@ export class UserDto {
 
   lastname: string;
 
-  sencondLastname?: string;
+  secondLastname?: string;
 
   bornDate: string;
 
