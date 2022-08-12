@@ -9,7 +9,7 @@ export class UserService {
   constructor(
     @InjectRepository(User) private readonly userRepo: Repository<User>,
   ) {}
-  async createUser(input: UserDto): Promise<UserDto> {
+  async createUser(input: UserDto): Promise<User> {
     try {
       const data = await this.userRepo.save(input);
 
@@ -17,7 +17,7 @@ export class UserService {
     } catch (e) {}
   }
 
-  async getUsers(): Promise<Array<UserDto>> {
+  async getUsers(): Promise<Array<User>> {
     const users = await this.userRepo.find();
     return users;
   }

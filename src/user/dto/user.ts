@@ -1,6 +1,4 @@
 export class UserDto {
-  id: number;
-
   name: string;
 
   secondName?: string;
@@ -17,5 +15,6 @@ export class UserDto {
 }
 
 export class UserResponseDto extends UserDto {
+  id: number;
   success: boolean;
 }
