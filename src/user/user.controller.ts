@@ -20,7 +20,11 @@ export class UserController {
   ): Promise<UserResponseDto> {
     const user: User = await this.userService.createUser(input);
 
-    res.setCookie('user', JSON.stringify(user));
+    res.setCookie('user', JSON.stringify(user), {
+      httpOnly: true,
+      path: '/',
+      sameSite: 'strict',
+    });
 
     return {
       ...user,
